@@ -18,25 +18,6 @@ Initially, alpha is negative infinity and beta is positive infinity, i.e. both p
 Whenever the maximum score that the minimizing player (i.e. the "beta" player) is assured of
 becomes less than the minimum score that the maximizing player (i.e., the "alpha" player) is assured of (i.e. beta < alpha),
 the maximizing player need not consider further descendants of this node, as they will never be reached in the actual play. (The branch is pruned.)
-function alphabeta(node, depth, alpha, beta, maximizingPlayer) is
-	if depth = 0 or node is a terminal node then
-		return the heuristic value of node
-	if maximizingPlayer then
-		value := -INFINITY
-		for each child of node do
-			value := max(value, alphabeta(child, depth - 1, alpha, beta, FALSE))
-			alpha := max(alpha, value)
-			if alpha >= beta then
-				break (* beta cut-off *)
-		return value
-	else
-		value := +INFINITY
-		for each child of node do
-			value := min(value, alphabeta(child, depth - 1, alpha, beta, TRUE))
-			beta := min(beta, value)
-			if beta <= alpha then
-				break (* alpha cut-off *)
-		return value
     
     -------------------------------------------------------------------------------------------------------------------------------------------------
     

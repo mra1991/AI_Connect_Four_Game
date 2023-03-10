@@ -1,7 +1,7 @@
 # AI_Connect_Four_Game
 Play Connect Four board-game against an AI that uses a minimax algorithm with alpha-beta pruning. A c++ console application.
 
-This a is a Connect-Four game that lets the player play against the computer(AI)
+This a is a Connect-Four game that lets the player play against the computer.
 The AI uses a minimax algorithm with alpha-beta pruning.
 Since this game has a huge number of possible configurations, the AI needs a horizon, which is the number of moves it can see ahead.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
